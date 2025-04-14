@@ -1,6 +1,6 @@
 export async function loadLatestVideo(apiKey, channelId) {
     const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id`
+      `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=1`
     );
   
     const data = await response.json();

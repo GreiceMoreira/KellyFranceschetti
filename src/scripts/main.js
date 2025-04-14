@@ -11,6 +11,8 @@ carregarPartial("footer", "./partials/footer.html");
 
 const apiKey = "AIzaSyAwoKiGBl1dqd0R6zjk_NcH7_bNaZAZoiw";
 const channelId = "UCqpApZf4Ro0EmhIH47YmVaw";
+// const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
+// const channelId = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
 
 loadLatestVideo(apiKey, channelId);
 

@@ -1,9 +1,9 @@
-export async function carregarPartial(tipo, caminho) {
-    try {
-      const res = await fetch(caminho);
-      const html = await res.text();
-      document.getElementById(`${tipo}-container`).innerHTML = html;
-    } catch (erro) {
-      console.error(`Erro ao carregar o ${tipo}:`, erro);
-    }
+export async function loadPartial(type, path) {
+  try {
+    const res = await fetch(path);
+    const html = await res.text();
+    document.getElementById(`${type}-container`).innerHTML = html;
+  } catch (error) {
+    console.error(`Error loading the ${type}:`, error);
   }
+}

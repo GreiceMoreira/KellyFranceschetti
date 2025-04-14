@@ -1,4 +1,4 @@
-import { carregarPartial } from "./utils.mjs";
+import { loadPartial } from "./utils.mjs";
 import { setupHamburgerMenu } from "./hamburgerMenu.mjs";
 import { getReceipsData, filterCrochets } from "./crochetsData.mjs";
 import { displayCrochets } from "./displayCrochets.mjs";
@@ -6,8 +6,8 @@ import { displayCrochets } from "./displayCrochets.mjs";
 import { thisYear, lastModification } from "./footerInfo.mjs";
 import { loadLatestVideo } from "./youtubeEmbed.mjs";
 
-carregarPartial("header", "./partials/header.html");
-carregarPartial("footer", "./partials/footer.html");
+loadPartial("header", "./public/partials/header.html");
+loadPartial("footer", "./public/partials/footer.html");
 
 const apiKey = "AIzaSyAwoKiGBl1dqd0R6zjk_NcH7_bNaZAZoiw";
 const channelId = "UCqpApZf4Ro0EmhIH47YmVaw";

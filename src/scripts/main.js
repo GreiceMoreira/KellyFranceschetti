@@ -6,8 +6,8 @@ import { displayCrochets } from "./displayCrochets.mjs";
 import { thisYear, lastModification } from "./footerInfo.mjs";
 import { loadLatestVideo } from "./youtubeEmbed.mjs";
 
-loadPartial("header", "./public/partials/header.html");
-loadPartial("footer", "./public/partials/footer.html");
+loadPartial("header", "./partials/header.html");
+loadPartial("footer", "./partials/footer.html");
 
 const apiKey = "AIzaSyAwoKiGBl1dqd0R6zjk_NcH7_bNaZAZoiw";
 const channelId = "UCqpApZf4Ro0EmhIH47YmVaw";

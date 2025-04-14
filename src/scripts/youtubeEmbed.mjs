@@ -16,6 +16,6 @@ export async function loadLatestVideo(apiKey, channelId) {
         </iframe>
       `;
     } else {
-      console.error("Nenhum vídeo encontrado.");
+      console.error("No video found.");
     }
   }

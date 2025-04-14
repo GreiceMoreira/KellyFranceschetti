@@ -30,7 +30,7 @@ async function generatePalette() {
       paletteContainer.appendChild(colorBox);
     });
   } catch (error) {
-    console.error("Erro ao gerar paleta:", error);
+    console.error("Error generating palette:", error);
   }
 }
 

@@ -10,7 +10,7 @@ carregarPartial("header", "./partials/header.html");
 carregarPartial("footer", "./partials/footer.html");
 
 const apiKey = "AIzaSyAwoKiGBl1dqd0R6zjk_NcH7_bNaZAZoiw";
-const channelId = "UC7mlMWoGRX3vVmCMLreMS_g";
+const channelId = "UCqpApZf4Ro0EmhIH47YmVaw";
 
 loadLatestVideo(apiKey, channelId);
 

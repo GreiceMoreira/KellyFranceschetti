@@ -4,9 +4,15 @@ import { getReceipsData, filterCrochets } from "./crochetsData.mjs";
 import { displayCrochets } from "./displayCrochets.mjs";
 // import { showMembershipInfo } from "./membership.mjs";
 import { thisYear, lastModification } from "./footerInfo.mjs";
+import { loadLatestVideo } from "./youtubeEmbed.mjs";
 
-carregarPartial("header", "./public/partials/header.html");
-carregarPartial("footer", "./public/partials/footer.html");
+carregarPartial("header", "./partials/header.html");
+carregarPartial("footer", "./partials/footer.html");
+
+const apiKey = "AIzaSyAwoKiGBl1dqd0R6zjk_NcH7_bNaZAZoiw";
+const channelId = "UC7mlMWoGRX3vVmCMLreMS_g";
+
+loadLatestVideo(apiKey, channelId);
 
 document.addEventListener("DOMContentLoaded", async () => {
   setupHamburgerMenu();

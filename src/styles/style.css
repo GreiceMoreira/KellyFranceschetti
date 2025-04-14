@@ -439,7 +439,8 @@ nav {
 }
 
 .membership-cards button,
-.filter-navigation button {
+.filter-navigation button,
+#generate {
   background-color: var(--yellow);
   color: black;
   border: none;
@@ -451,7 +452,8 @@ nav {
 
 .membership-cards button:hover,
 dialog button:hover,
-.discover-card button:hover {
+.discover-card button:hover,
+#generate:hover {
   background-color: var(--turquoise);
 }
 
@@ -566,8 +568,13 @@ dialog button,
 /* Color Palete */
 
 .color-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
   padding: 2rem;
+  min-height: 100vh;
 }
 
 .palette {
@@ -578,12 +585,22 @@ dialog button,
 }
 
 .color-box {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 5px;
 }
 
 .color-box:hover {
   transform: scale(1.1);
+}
+
+#baseColor {
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--yellow);
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
 }

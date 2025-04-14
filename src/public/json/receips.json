@@ -6,7 +6,7 @@
       "yearn": "Mollet",
       "hook": "3.5",
       "level": "Child",
-      "imageurl": "images/granny_blue.webp"
+      "imageurl": "./images/granny_blue.webp"
     },
     {
       "name": "Beatrix",
@@ -14,7 +14,7 @@
       "yearn": "Mollet",
       "hook": "4",
       "level": "Child",
-      "imageurl": "images/granny_calm.webp"
+      "imageurl": "./images/granny_calm.webp"
     },
     {
       "name": "Chloe",
@@ -22,7 +22,7 @@
       "yearn": "Mollet",
       "hook": "3.5",
       "level": "Child",
-      "imageurl": "images/granny_colors.webp"
+      "imageurl": "./images/granny_colors.webp"
     },
     {
       "name": "Daysi",
@@ -30,7 +30,7 @@
       "yearn": "Cupcake",
       "hook": "2",
       "level": "Granny",
-      "imageurl": "images/granny_crazy.webp"
+      "imageurl": "./images/granny_crazy.webp"
     },
     {
       "name": "Emma",
@@ -38,7 +38,7 @@
       "yearn": "Mollet",
       "hook": "2.5",
       "level": "Adult",
-      "imageurl": "images/granny_flower.webp"
+      "imageurl": "./images/granny_flower.webp"
     },
     {
       "name": "Fary",
@@ -46,7 +46,7 @@
       "yearn": "Anne",
       "hook": "3",
       "level": "Granny",
-      "imageurl": "images/granny_heart.webp"
+      "imageurl": "./images/granny_heart.webp"
     },
     {
       "name": "Gabriella",
@@ -54,7 +54,7 @@
       "yearn": "Anne",
       "hook": "3",
       "level": "Adult",
-      "imageurl": "images/granny_darkblue.webp"
+      "imageurl": "./images/granny_darkblue.webp"
     },
     {
       "name": "Hild",
@@ -62,7 +62,7 @@
       "yearn": "Anne",
       "hook": "3",
       "level": "Granny",
-      "imageurl": "images/granny_diagonal.webp"
+      "imageurl": "./images/granny_diagonal.webp"
     },
     {
       "name": "Irene",
@@ -70,7 +70,7 @@
       "yearn": "Anne",
       "hook": "3",
       "level": "Granny",
-      "imageurl": "images/granny_grec.webp"
+      "imageurl": "./images/granny_grec.webp"
     },
     {
       "name": "Julie",
@@ -78,7 +78,7 @@
       "yearn": "Anne",
       "hook": "3",
       "level": "Adult",
-      "imageurl": "images/granny_lily.webp"
+      "imageurl": "./images/granny_lily.webp"
     },
     {
       "name": "Leslie",
@@ -86,7 +86,7 @@
       "yearn": "Anne",
       "hook": "3",
       "level": "Granny",
-      "imageurl": "images/granny_snow.webp"
+      "imageurl": "./images/granny_snow.webp"
     },
     {
       "name": "Marie",
@@ -94,7 +94,7 @@
       "yearn": "Anne",
       "hook": "3",
       "level": "Child",
-      "imageurl": "images/granny_sunblue.webp"
+      "imageurl": "./images/granny_sunblue.webp"
     },
     {
       "name": "Nate",
@@ -102,7 +102,7 @@
       "yearn": "Anne",
       "hook": "3",
       "level": "Granny",
-      "imageurl": "images/granny_turquoise.webp"
+      "imageurl": "./images/granny_turquoise.webp"
     },
     {
       "name": "Olive",
@@ -110,7 +110,7 @@
       "yearn": "Anne",
       "hook": "3",
       "level": "Adult",
-      "imageurl": "images/granny_square.webp"
+      "imageurl": "./images/granny_square.webp"
     },
     {
       "name": "Pretty",
@@ -118,7 +118,7 @@
       "yearn": "Anne",
       "hook": "3",
       "level": "Granny",
-      "imageurl": "images/granny_eco.webp"
+      "imageurl": "./images/granny_eco.webp"
     }
   ]
 }

@@ -1,8 +1,9 @@
-const url = "./public/dados/receips.json"; // ajuste o caminho conforme onde colocar
+const url = "./json/receips.json";
 
 export async function getReceipsData() {
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data); // Verifique os dados aqui
     return data.crochets;
 }
 

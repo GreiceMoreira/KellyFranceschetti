@@ -27,11 +27,6 @@ if (
   loadLatestVideo(apiKey, channelId);
 }
 
-//color palette api
-// if (window.location.pathname.includes("colorPalette")) {
-//   import("./colorPalette.mjs");
-// }
-
 document.addEventListener("DOMContentLoaded", async () => {
   if (window.matchMedia("(max-width: 768px)").matches) {
     setupHamburgerMenu();

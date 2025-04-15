@@ -1,43 +1,48 @@
 document.getElementById('generate').addEventListener('click', generatePalette);
 
 async function generatePalette() {
-  const hex = document.getElementById('baseColor').value;
-  const rgbBase = hexToRgb(hex);
-
-  const input = [rgbBase, "N", "N", "N", "N"]; 
+  const hex = document.getElementById('baseColor').value.slice(1); // Remove the "#"
 
   try {
-    const response = await fetch('http://colormind.io/api/', {
-      method: "POST",
-      body: JSON.stringify({
-        model: "default",
-        input: input
-      })
-    });
-
+    const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&scheme=analogic&count=5&mode=analogic`);
     const data = await response.json();
-    const colors = data.result;
 
-    const paletteContainer = document.getElementById('palette');
-    paletteContainer.innerHTML = '';
+    if (data.colors && data.colors.length > 0) {
+      const colors = data.colors;
+      console.log(colors);
 
-    colors.forEach(rgb => {
-      const colorBox = document.createElement('div');
-      const color = `rgb(${rgb.join(',')})`;
-      colorBox.className = 'color-box';
-      colorBox.style.backgroundColor = color;
-      colorBox.title = color;
-      paletteContainer.appendChild(colorBox);
-    });
+      const paletteContainer = document.getElementById('palette');
+      paletteContainer.innerHTML = ''; 
+
+      colors.forEach(color => {
+        const colorBox = document.createElement('div');
+        colorBox.className = 'color-box';
+        colorBox.style.backgroundColor = color.hex.value;
+        colorBox.title = color.hex.value;
+
+        const colorInfo = document.createElement('div');
+        colorInfo.className = 'color-info';
+
+
+        const colorName = document.createElement('p');
+        colorName.textContent = color.name.value || 'Name not available'; 
+        console.log(color.name.value)
+
+
+        const colorHex = document.createElement('p');
+        colorHex.textContent = color.hex.value;
+
+        colorInfo.appendChild(colorName);
+        colorInfo.appendChild(colorHex);
+
+
+        paletteContainer.appendChild(colorBox);
+        paletteContainer.appendChild(colorInfo);
+      });
+    } else {
+      console.error("No colors found in the response.");
+    }
   } catch (error) {
     console.error("Error generating palette:", error);
   }
-}
-
-function hexToRgb(hex) {
-  const bigint = parseInt(hex.substring(1), 16);
-  const r = (bigint >> 16) & 255;
-  const g = (bigint >> 8) & 255;
-  const b = bigint & 255;
-  return [r, g, b];
 }

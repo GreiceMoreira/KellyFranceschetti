@@ -579,6 +579,7 @@ dialog button,
 
 .palette {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
@@ -603,4 +604,16 @@ dialog button,
   border-radius: 8px;
   background-color: white;
   cursor: pointer;
+}
+
+.color-info {
+  text-align: center;
+  font-size: 12px;
+  max-width: 60px;
+  margin-top: 5px;
+}
+
+.color-info p {
+  margin: 2px 0;
+  color: #333;
 }

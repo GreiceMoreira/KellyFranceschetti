@@ -6,6 +6,7 @@ import { showMembershipInfo } from "./membership.mjs";
 window.showMembershipInfo = showMembershipInfo;
 import { thisYear, lastModification } from "./footerInfo.mjs";
 import { loadLatestVideo } from "./youtubeEmbed.mjs";
+import("./colorPalette.mjs");
 
 // header and footer
 loadPartial("header", "./partials/header.html");
@@ -27,9 +28,9 @@ if (
 }
 
 //color palette api
-if (window.location.pathname.includes("colorPalette")) {
-  import("./colorPalette.mjs");
-}
+// if (window.location.pathname.includes("colorPalette")) {
+//   import("./colorPalette.mjs");
+// }
 
 document.addEventListener("DOMContentLoaded", async () => {
   if (window.matchMedia("(max-width: 768px)").matches) {

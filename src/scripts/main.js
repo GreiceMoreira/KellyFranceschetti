@@ -16,7 +16,8 @@ loadPartial("footer", "./partials/footer.html").then(() => {
 
 //youtube api
 const apiKey = "AIzaSyAwoKiGBl1dqd0R6zjk_NcH7_bNaZAZoiw";
-const channelId = "UCqpApZf4Ro0EmhIH47YmVaw";
+// const channelId = "UCqpApZf4Ro0EmhIH47YmVaw";
+const channelId = "UC7mlMWoGRX3vVmCMLreMS_g";
 
 if (
   window.location.pathname === "/" ||
@@ -26,7 +27,7 @@ if (
 }
 
 //color palette api
-if (window.location.pathname.includes("colorPalette.html")) {
+if (window.location.pathname.includes("colorPalette")) {
   import("./colorPalette.mjs");
 }
 

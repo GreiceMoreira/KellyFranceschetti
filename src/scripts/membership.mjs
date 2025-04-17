@@ -1,3 +1,4 @@
+// Object containing data for each membership type
 const membershipData = {
     child: {
         title: "Beginner Crochet Membership",
@@ -13,8 +14,14 @@ const membershipData = {
     }
 };
 
+/**
+ * Displays the membership information in a modal based on the selected membership ID.
+ * @param {string} membershipId - The ID of the membership (e.g., 'child', 'adult', 'granny').
+ */
 export function showMembershipInfo(membershipId) {
     const membership = membershipData[membershipId];
+
+    // If membership data exists, update modal content and display it
     if (membership) {
         document.getElementById("membershipTitle").textContent = membership.title;
         document.getElementById("membershipDescription").textContent = membership.description;

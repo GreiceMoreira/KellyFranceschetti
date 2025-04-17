@@ -1,25 +1,26 @@
+// Importing utility and module functions
 import { loadPartial } from "./utils.mjs";
 import { setupHamburgerMenu } from "./hamburgerMenu.mjs";
 import { getReceipsData, filterCrochets } from "./crochetsData.mjs";
 import { displayCrochets } from "./displayCrochets.mjs";
 import { showMembershipInfo } from "./membership.mjs";
-window.showMembershipInfo = showMembershipInfo;
+window.showMembershipInfo = showMembershipInfo; // Making it globally available for inline events
 import { thisYear, lastModification } from "./footerInfo.mjs";
 import { loadLatestVideo } from "./youtubeEmbed.mjs";
-import("./colorPalette.mjs");
+import("./colorPalette.mjs"); // Dynamically load the color palette module
 
-// header and footer
+// Load header and footer partials
 loadPartial("header", "./partials/header.html");
 loadPartial("footer", "./partials/footer.html").then(() => {
-  thisYear();
-  lastModification();
+  thisYear(); // Display current year in the footer
+  lastModification(); // Display last modified date of the document
 });
 
-//youtube api
+// YouTube API credentials
 const apiKey = "AIzaSyAwoKiGBl1dqd0R6zjk_NcH7_bNaZAZoiw";
-// const channelId = "UCqpApZf4Ro0EmhIH47YmVaw";
-const channelId = "UC7mlMWoGRX3vVmCMLreMS_g";
+const channelId = "UCqpApZf4Ro0EmhIH47YmVaw";
 
+// Load latest video on the homepage
 if (
   window.location.pathname === "/" ||
   window.location.pathname.endsWith("index.html")
@@ -27,16 +28,19 @@ if (
   loadLatestVideo(apiKey, channelId);
 }
 
+// Run after DOM has fully loaded
 document.addEventListener("DOMContentLoaded", async () => {
+  // Initialize hamburger menu on small screens
   if (window.matchMedia("(max-width: 768px)").matches) {
     setupHamburgerMenu();
   }
 
-  //Display receips gallery
+  // Display crochet gallery on the gallery page
   if (window.location.pathname.includes("gallery.html")) {
     const crochets = await getReceipsData();
     displayCrochets(crochets);
 
+    // Filter buttons by level
     document.querySelector("#All").addEventListener("click", async () => {
       displayCrochets(await getReceipsData());
     });
@@ -54,8 +58,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Display membership information on the form page
   if (window.location.pathname.includes("form.html")) {
-    //Display membership
     document.getElementById("child").addEventListener("click", () => {
       showMembershipInfo("child");
     });

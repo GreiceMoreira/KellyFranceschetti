@@ -6,6 +6,8 @@
   --yellow: #ffc43d; /* Details */
   --white: #fcfcfc;
   --dark-pink: #d42a54;
+  --brown: #a0522d;
+  --black: #000;
 }
 
 * {
@@ -139,11 +141,15 @@ footer {
 }
 
 /* titles and text contents  */
-h1 {
+h1,
+h2 {
   color: var(--pink);
   font-family: "Rouge Script", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+h1 {
   font-size: clamp(4rem, 7vw, 7rem);
   padding: 15px;
   background-color: var(--pale-green);
@@ -151,10 +157,6 @@ h1 {
 }
 
 h2 {
-  color: var(--pink);
-  font-family: "Rouge Script", serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: clamp(3.5rem, 5vw, 4.5rem);
   border-bottom: 1px dashed var(--green);
 }
